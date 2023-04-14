@@ -37,7 +37,8 @@
                 <input type="text" id="City" name="City">
 
                 <label for="State">Your State</label>
-                <select name="state"> 
+                <input type="text" id="State" name="State" list="state-list">
+                <datalist id="state-list">
                     <option value="  ">Please select your state:</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -88,7 +89,7 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WV">West Virginia</option>
                     <option value="WY">Wyoming</option>
-                </select>
+                </datalist>
                 
                 <label for="Zipcode">Your Zipcode</label>
                 <input type="text" id="Zipcode" name="Zipcode">
@@ -108,7 +109,7 @@
                     <label for="japan">Japan</label>
                 </div>
                 <div>
-                    <input type="radio" id="reykjavik" name="location" value="Reykjavik"> 
+                    <input type="radio" id="reykjavik" name="location" value="Reykjavik" checked> 
                     <label for="reykjavik">Reykjavik</label>
                 </div>
                 <div>
@@ -128,7 +129,7 @@
                     <label for="sauna">Sauna Access</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="hottub" name="extras" value="Hot Tub"> 
+                    <input type="checkbox" id="hottub" name="extras" value="Hot Tub" checked> 
                     <label for="hottub">In-Room Hot Tub</label>
                 </div>
                 <div>
