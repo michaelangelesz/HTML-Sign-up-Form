@@ -12,21 +12,26 @@
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
-        <form> <!-- TODO: Set Action and Method Properties -->
+        <form method="GET" action="results.html"> 
+            <!-- TODO: Set Action and Method Properties -->
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <label for="firstname">Your First Name<span class="required-field">*</span></label>                
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required>
                 <!-- TODO: Create a "lastname" input with type "text" -->
-                <label for="firstname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <label for="firstname">Your Last Name<span class="required-field">*</span></label>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120" required>
+
             </div>
             <!-- TODO: Make fieldset and legend -->
             <fieldset>
+                <div>
                 <legend>Your Contact Info</legend>
 
             <!-- Todo: Email Input -->
-                <label for="email">Your Email</label>
-                <input type="text" id="email" name="email">
+                <label for="email">Your Email<span class="required-field">*</span></label>
+                <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 
             <!-- Todo: Street Address Input -->
                 <label for="Address">Your Street Address</label>
@@ -92,7 +97,9 @@
                 </datalist>
                 
                 <label for="Zipcode">Your Zipcode</label>
-                <input type="text" id="Zipcode" name="Zipcode">
+                <input type="text" id="Zipcode" name="Zipcode" pattern="[0-9]{5}" title="5-Digit US Zip Code">
+            </div>
+                </fieldset>
             </fieldset>
 
             <!-- TODO: Second fieldset -->
@@ -101,7 +108,7 @@
                 <legend>Your Preferences</legend>
                 <h3>Choose your location</h3>
                 <div>
-                    <input type="radio" id="aruba" name="location" value="Aruba" checked> 
+                    <input type="radio" id="aruba" name="location" value="Aruba"> 
                     <label for="aruba">Aruba</label>
                 </div>
                 <div>
@@ -145,6 +152,7 @@
             <!-- TODO: Submit Button -->
 
             <input type="submit" value="Enter the Contest!">
+
         </form>
     </main>
     <footer>
